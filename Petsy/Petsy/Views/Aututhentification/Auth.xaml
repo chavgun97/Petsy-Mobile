@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.Views.Aututhentification.Auth"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content >
+        
+        <RelativeLayout BackgroundColor = "#FBF2E9"  >
+
+            <Image Source="Auth_BackGround.png"
+                   Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                   />
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20,0,20,0"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Image Source="Auth_Petsy.png"/>
+                <Image Source="Auth_Lapa.png" Margin="0, 20, 0, 40" />
+                <Button 
+                    Clicked="OnBtnSignInPage"
+                   BorderRadius="10"
+                    Text="Sign in"
+                    FontSize="24"
+                    FontFamily="Roboto-Bold"
+                    FontAttributes="Bold"
+                       TextColor="#071C2B"
+                        BackgroundColor="#F0CDB1" 
+                    
+                    WidthRequest="335" 
+                    HeightRequest="55" 
+                    HorizontalOptions="Center"/>
+                
+                <Button 
+                    Clicked="OnBtnCreateAccauntPage"
+                    BorderRadius="10"
+                    Text="Create Account"
+                    FontSize="24"
+                    FontFamily="Roboto-Bold"
+                    FontAttributes="Bold"
+                       TextColor="#FBF2E9"
+                        BackgroundColor="#F0CDB1" 
+                    WidthRequest="335" HeightRequest="55" 
+                    HorizontalOptions="Center"
+                    Margin="0,24,0,0"
+                    />
+                <Image Source="Auth_ORSignIn.png" Margin="0,21,0,0"/>
+
+                <Grid WidthRequest="150" HeightRequest="40" HorizontalOptions="Center" >
+                    <ImageButton 
+                        Source="Auth_facebook.png" 
+                        WidthRequest="40" HeightRequest="40" 
+                        HorizontalOptions="Start" 
+                        BackgroundColor="Transparent"
+                        />
+                   
+                    <ImageButton 
+                        Source="Auth_GoogleIcon.png" 
+                        WidthRequest="40" 
+                        HeightRequest="40" 
+                        HorizontalOptions="End"
+                        BackgroundColor="Transparent"
+                        
+                        />
+                </Grid>
+                
+            </StackLayout>
+           
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

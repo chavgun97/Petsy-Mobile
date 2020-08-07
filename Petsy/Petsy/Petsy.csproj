@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  
+
+  <ItemGroup>
+    <Content Include="Auth_BackGround.png" />
+    <Content Include="Auth_CreateAccount.png" />
+    <Content Include="Auth_facebook.png" />
+    <Content Include="Auth_GoogleIcon.png" />
+    <Content Include="Auth_Instagram.png" />
+    <Content Include="Auth_Lapa.png" />
+    <Content Include="Auth_Main.png" />
+    <Content Include="Auth_ORSignIn.png" />
+    <Content Include="Auth_Petsy.png" />
+    <Content Include="Auth_SignIn.png" />
+    <Content Include="Images\auth\BackGround.png" />
+    <Content Include="Images\auth\Create Account.png" />
+    <Content Include="Images\auth\facebook 1.png" />
+    <Content Include="Images\auth\Google Icon 1.png" />
+    <Content Include="Images\auth\Instagram 1.png" />
+    <Content Include="Images\auth\Lapa 1.png" />
+    <Content Include="Images\auth\Main 1.png" />
+    <Content Include="Images\auth\OR Sign In.png" />
+    <Content Include="Images\auth\Petsy 1.png" />
+    <Content Include="Images\auth\Sign In.png" />
+    <Content Include="Splash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Aututhentification\Auth.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Aututhentification\CreateAccountPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Aututhentification\SignInPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TestUserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  
+</Project>

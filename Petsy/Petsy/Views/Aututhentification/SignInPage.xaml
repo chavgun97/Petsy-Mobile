@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.Views.Aututhentification.SignInPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor = "#FBF2E9"  >
+
+            <Image Source="Auth_BackGround.png"
+                   Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                   />
+            <StackLayout VerticalOptions="Center" Margin="20,0,20,0"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+                <Label 
+                    Text="Sign in"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    Margin="0,0,0,20"
+                    />
+                <Label 
+                    Text="E-mail:"
+                    FontSize="18"
+                    />
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="example@gmail"
+                    Margin="0,0,0,20"
+                    TextChanged="OnTextEntryChaged"
+                    />
+                <Label 
+                    Text="Password:"
+                    FontSize="18"
+                    />
+                <Entry
+                    x:Name="PSWEntry"
+                    Placeholder="Password"
+                    IsPassword="True"                    
+                    Margin="0,0,0,20"
+                    TextChanged="OnTextEntryChaged"
+                    />
+
+                <Button 
+                    Clicked="OnSignInBtn"
+                    x:Name="SignInBtn"
+                    BorderRadius="10"
+                    Text="Sign in"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    FontFamily="Roboto-Bold"
+                    TextColor="#FBF2E9"
+                    BackgroundColor="#BABABA"
+                        
+                 />
+
+
+                <Image Source="Auth_ORSignIn.png" Margin="0,21,0,0"/>
+
+                <Grid WidthRequest="150" HeightRequest="40" HorizontalOptions="Center" >
+                    <ImageButton 
+                        Source="Auth_facebook.png" 
+                        WidthRequest="40" HeightRequest="40" 
+                        HorizontalOptions="Start" 
+                        BackgroundColor="Transparent"
+                        />
+
+                    <ImageButton 
+                        Source="Auth_GoogleIcon.png" 
+                        WidthRequest="40" 
+                        HeightRequest="40" 
+                        HorizontalOptions="End"
+                        BackgroundColor="Transparent"
+                        
+                        />
+                </Grid>
+                <Label x:Name="ErrorMsgLable" TextColor="Red" HorizontalOptions="Center"/>
+
+
+
+
+            </StackLayout>
+
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
