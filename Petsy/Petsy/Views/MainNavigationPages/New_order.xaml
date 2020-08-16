@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.Views.MainNavigationPages.New_order"
+             NavigationPage.HasNavigationBar="False">
+
+    <?Проблема с отражением больших букв вместо маленьких решеаеться так же созданием совбстевнного
+    рендеринга класса конопки или изменением стиля в андроид проекте?>
+    <ContentPage.Content >
+        <RelativeLayout BackgroundColor = "#FBF2E9">
+            <Image Source="NavPage_TOP.png"
+                   Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  
+                   />
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20,50,20,0"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Label Text="New order" FontSize="36"
+                    HorizontalOptions="Center" 
+                    FontAttributes="Bold"
+                       TextColor="#071C2B"/>
+                
+                <Image Source="NavPage_Walking.png" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                
+                <Button  Clicked="Dog_walking_cklicked"
+                        BorderRadius="10"
+                        Text="Dog Walking"
+                        FontSize="24"
+                        TextColor ="White"
+                            BackgroundColor="#F0CDB1" 
+                    
+                        WidthRequest="335" 
+                        HeightRequest="50" 
+                        HorizontalOptions="Center"/>
+                <Image Source="NavPage_Sofa.png" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                       />
+                <Button Clicked="Dog_sitting_cklicked"
+                        BorderRadius="10"
+                        Text="Dog sitting"
+                        FontSize="24"
+                        TextColor ="White"
+                            BackgroundColor="#F0CDB1" 
+                    
+                        WidthRequest="335" 
+                        HeightRequest="50" 
+                        HorizontalOptions="Center"/>
+
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

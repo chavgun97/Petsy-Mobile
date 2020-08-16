@@ -1,13 +1,13 @@
-﻿using Petsy.Interfaces;
+﻿using Petsy.Cache;
+using Petsy.Interfaces;
 using Petsy.Models;
+using Petsy.Models.DTO;
+using Petsy.Services;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Petsy.Models.RequestJSON.RequestsJSON;
 
 namespace Petsy.Views.Aututhentification
 {
@@ -15,10 +15,12 @@ namespace Petsy.Views.Aututhentification
     public partial class CreateAccountPage : ContentPage
     {
         private bool EntryesIsValidate;
+        private IClientRestApi RestClient;
+        private ICache<User_x> currentUser;
         public CreateAccountPage()
         {
+            currentUser = CurrentUser.GetInstance();
             InitializeComponent();
-            
         }
    
 
@@ -45,11 +47,11 @@ namespace Petsy.Views.Aututhentification
         {
             if (EntryesIsValidate)
             {
-                var name = NameEntry.Text;
-                var email = EmailEntry.Text;
-                var psw = PSWEntry.Text;
+                var name = NameEntry.Text.Trim();
+                var email = EmailEntry.Text.Trim();
+                var psw = PSWEntry.Text.Trim();
 
-                var FdImpl = DependencyService.Get<IFireBaseAuth>();
+                var FdImpl = DependencyService.Get<IFireBaseAuth>(); //Factory
                 ResultAuth result = await FdImpl.RegisteredWithEP(name, email, psw);
                 if (result.isError)
                 {
@@ -60,9 +62,19 @@ namespace Petsy.Views.Aututhentification
                     
                     var token = result.Token;
                     var userName = result.Name;
-                    TestDataUser.Name = userName;
-                    TestDataUser.AuthKey = token;
-                    await Navigation.PushAsync(new MainPage());
+
+                    currentUser.Get().Name = userName;
+                    currentUser.Get().UID = result.UID;
+
+                    RestClient = ClientRestApi.CreateNewInstance(token);
+                    int i = RestClient.CreateUser(new UserRequest(currentUser.Get())).Result.ResultExecution;
+                    if (i == 0)
+                    {
+                        currentUser.Update(RestClient.GetUserByToken().Result.UserExternal);                        
+                        await Navigation.PushAsync(new MainPage());
+                    }
+                    else
+                        ErrorMsgLable.Text = ("Ошибка создания нового пользователя на стороне сервера");
                 }
             }
 

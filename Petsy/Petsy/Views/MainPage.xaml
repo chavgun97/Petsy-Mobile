@@ -4,36 +4,82 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            xmlns:views="clr-namespace:Petsy.Views"
+            xmlns:views="clr-namespace:Petsy.Views" xmlns:views1="clr-namespace:Petsy.Views.MainNavigationPages"
             x:Class="Petsy.Views.MainPage"
             NavigationPage.HasNavigationBar="False"
-            BackgroundColor="#FBF2E9"
-            
+            BackgroundColor="#F0CDB1"
             >
-
-
-    <TabbedPage.Children>
-        <NavigationPage Title="Browse">
+    <?Проблема с обрезкой текста в заголовке рерашеться созданием кастомного рендеринга этой страницы.
+    Я не понял до конца как это решаеться и откладываю это на конец. Поиск - как изменить шрифт тайтла.
+    Объект, управляющий навигацией и взаимодействием с пользователем для стека других страниц.
+    ?>
+    <TabbedPage.Children >
+        <NavigationPage x:Name="TestNavpage" Title="Messages" BackgroundColor="#FBF2E9">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
+                    <On Platform="iOS" Value="Tab_1.png"/>
+                    <On Platform="Android" Value="Tab_1.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:TestUserPage />
+                <views1:Messages />
             </x:Arguments>
         </NavigationPage>
-        
-        <NavigationPage Title="About">
+
+        <NavigationPage Title="Orders" BackgroundColor="#FBF2E9">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_about.png"/>
+                    <On Platform="iOS" Value="Tab_2.png"/>
+                    <On Platform="Android" Value="Tab_2.png"/>
+
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:TestUserPage />
+                <views1:Orders />
+            </x:Arguments>
+            
+        </NavigationPage>
+
+        <NavigationPage Title="New order">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" >
+                    <On Platform="iOS" Value="Tab_3.png"/>
+                    <On Platform="Android" Value="Tab_3.png"/>
+
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views1:New_order/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="My pets" BackgroundColor="#FBF2E9" >
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="Tab_4.png"/>
+                    <On Platform="Android" Value="Tab_4.png"/>
+
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views1:My_Pets />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Profile" BackgroundColor="#FBF2E9">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="Tab_5.png"/>
+                    <On Platform="Android" Value="Tab_5.png"/>
+
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views1:Profile />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
+
     
+
 </TabbedPage>

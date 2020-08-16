@@ -30,5 +30,6 @@
   <style name="Theme.Splash" parent="android:Theme">
     <item name="android:windowBackground">@drawable/Splash</item>
     <item name="android:windowNoTitle">true</item>
+    <item name="android:textAllCaps">false</item>
   </style>
 </resources>

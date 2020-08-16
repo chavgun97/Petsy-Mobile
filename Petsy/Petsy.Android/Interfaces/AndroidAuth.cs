@@ -18,7 +18,7 @@ namespace Petsy.Droid.Interfaces
                 var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(Email, Psw);
                 var token = await user.User.GetIdTokenAsync(false);
 
-                return new ResultAuth() { Token = token.Token, isError = false, Name = user.User.DisplayName };
+                return new ResultAuth() {Token = token.Token, isError = false, Name = user.User.DisplayName, UID = user.User.Uid};
             }catch( Exception err)
             {
                 return new ResultAuth() {isError = true, ErrorMsg = err.Message };
@@ -45,7 +45,7 @@ namespace Petsy.Droid.Interfaces
                 UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder().SetDisplayName(Name).Build();
                 await user.User.UpdateProfileAsync(profile);
                 var token = await user.User.GetIdTokenAsync(false);
-                return  new ResultAuth() { Token = token.Token, isError = false, Name = Name};
+                return  new ResultAuth() { Token = token.Token, isError = false, Name = Name, UID = user.User.Uid};
             }
             catch (Exception err)
             {

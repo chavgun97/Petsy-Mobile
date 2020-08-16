@@ -14,8 +14,10 @@ namespace Petsy.Views
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            CurrentPage = Children[2];
         }
     }
+    
 }
