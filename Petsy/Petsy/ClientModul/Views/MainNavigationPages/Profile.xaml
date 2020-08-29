@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.Views.MainNavigationPages.Profile"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor = "#FBF2E9">
+            <Image Source="NavPage_TOP.png"
+                   Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  
+                   />
+            <StackLayout Margin="20,100,20,0"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Label x:Name="NameLable" Text="Rolanda Mai" FontSize="36"
+                            HorizontalOptions="CenterAndExpand" 
+                            FontAttributes="Bold"
+                            TextColor="#071C2B"
+
+                       />
+                <Image x:Name="LableFoto" WidthRequest="100" HeightRequest="100"
+                       Margin="0,10,0,20"
+                       />
+                <Label Text="Amount" FontSize="25" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="Amount" FontSize="25" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+
+                    <Label x:Name="InformAboutUser" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

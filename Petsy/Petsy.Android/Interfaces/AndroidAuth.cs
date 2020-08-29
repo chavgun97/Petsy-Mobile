@@ -1,7 +1,7 @@
-﻿using Android.Gms.Common.Apis;
-using Firebase.Auth;
+﻿using Firebase.Auth;
 using Petsy.Droid.Interfaces;
-using Petsy.Interfaces;
+using Petsy.Models;
+using Petsy.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -24,11 +24,8 @@ namespace Petsy.Droid.Interfaces
                 return new ResultAuth() {isError = true, ErrorMsg = err.Message };
             }        
         }
-
         public Task<ResultAuth> LoginWithFacebook()
-        {
-            //GoogleAuthProvider.GetCredential();
-           
+        {           
             throw new NotImplementedException();
         }
 

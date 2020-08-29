@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.ClientModul.Views.MainNavigationPages.ChildrenPages.MessagesItemPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <BoxView BackgroundColor="#F0CDB1" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start"/>
+            <StackLayout BackgroundColor="#F0CDB1" Orientation="Horizontal" HeightRequest="50"   HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                <ImageButton Source="Back.png" 
+                             Clicked ="Back_Clicked" HorizontalOptions="Start"
+                             BackgroundColor="Transparent" 
+                             Margin="20,0,20,0"
+                             >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1.5" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+                <Image x:Name="LableSitterImg" HeightRequest="50" WidthRequest="50" Background="Black"/>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="FullNameSitterLable" Text="Rolanda Mei" FontSize="18"/>
+                    <Label x:Name="OnlineSatusLable" Text="online" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+            <CollectionView x:Name="ChatsCollectionView" VerticalOptions="CenterAndExpand">
+
+            </CollectionView>
+            <StackLayout BackgroundColor="#F0CDB1" Orientation="Horizontal" HeightRequest="70"  HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                <Entry x:Name="MessegeEntry" Placeholder="Text here..."  Margin="10,5,10,5" WidthRequest="280" HorizontalOptions="EndAndExpand" />
+                <ImageButton Source="send.png" Clicked="ImageButton_Clicked_1" Margin="0,5,20,5" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" HorizontalOptions ="End">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1.5" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

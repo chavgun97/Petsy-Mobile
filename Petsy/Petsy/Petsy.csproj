@@ -1,30 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <WarningLevel>3</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Back.png" />
-    <None Remove="Filter.png" />
-    <None Remove="Map.png" />
-    <None Remove="NavPage_Sofa.png" />
-    <None Remove="NavPage_TOP.png" />
-    <None Remove="NavPage_Walking.png" />
-    <None Remove="Tab_1.png" />
-    <None Remove="Tab_2.png" />
-    <None Remove="Tab_3.png" />
-    <None Remove="Tab_4.png" />
-    <None Remove="Tab_5.png" />
+    <None Remove="send.png" />
   </ItemGroup>
-
-  
 
   <ItemGroup>
     <Content Include="Auth_BackGround.png" />
@@ -39,20 +28,11 @@
     <Content Include="Auth_SignIn.png" />
     <Content Include="Back.png" />
     <Content Include="Filter.png" />
-    <Content Include="Images\auth\BackGround.png" />
-    <Content Include="Images\auth\Create Account.png" />
-    <Content Include="Images\auth\facebook 1.png" />
-    <Content Include="Images\auth\Google Icon 1.png" />
-    <Content Include="Images\auth\Instagram 1.png" />
-    <Content Include="Images\auth\Lapa 1.png" />
-    <Content Include="Images\auth\Main 1.png" />
-    <Content Include="Images\auth\OR Sign In.png" />
-    <Content Include="Images\auth\Petsy 1.png" />
-    <Content Include="Images\auth\Sign In.png" />
     <Content Include="Map.png" />
     <Content Include="NavPage_Sofa.png" />
     <Content Include="NavPage_TOP.png" />
     <Content Include="NavPage_Walking.png" />
+    <Content Include="send.png" />
     <Content Include="Splash.png" />
     <Content Include="Tab_1.png" />
     <Content Include="Tab_2.png" />
@@ -63,44 +43,52 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="refit" Version="5.1.67" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.4" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\Aututhentification\Auth.xaml">
+    <EmbeddedResource Update="ClientModul\Views\Aututhentification\Auth.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Aututhentification\CreateAccountPage.xaml">
+    <EmbeddedResource Update="ClientModul\Views\Aututhentification\CreateAccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Aututhentification\SignInPage.xaml">
+    <EmbeddedResource Update="ClientModul\Views\Aututhentification\SignInPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\ChildrenPages\AvailableSitters.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\ChildrenPages\AvailableSitters.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\ChildrenPages\Pet_info.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\ChildrenPages\MessagesItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\ChildrenPages\Siteer_front_page.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\ChildrenPages\Pet_info.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\Messages.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\ChildrenPages\Siteer_front_page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\My_Pets.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\Messages.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\New_order.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\My_Pets.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\Orders.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\New_order.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainNavigationPages\Profile.xaml">
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\Orders.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\PopUp\PopUpCreateOrder.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ClientModul\Views\MainNavigationPages\Profile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

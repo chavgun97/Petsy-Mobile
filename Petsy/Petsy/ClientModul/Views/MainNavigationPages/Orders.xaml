@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Petsy.Views.MainNavigationPages.Orders"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor = "#FBF2E9">
+            <Image Source="NavPage_TOP.png"
+                       Aspect="Fill"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"                 
+                       />
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="0,100,0,0"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                    
+                    <Label Text="Orders" FontSize="36"
+                            HorizontalOptions="CenterAndExpand" 
+                            FontAttributes="Bold"
+                            TextColor="#071C2B"
+                            Margin="25,0,0,0"/>
+                    
+                    <ImageButton Source="Filter.png" 
+                                 Clicked="Filter_Clicked"  
+                                 HorizontalOptions ="End"
+                                 WidthRequest="29" HeightRequest="23"
+                                 BackgroundColor="Transparent"
+                                 >
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale" Value="1.5" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    
+                </StackLayout>
+                <RefreshView x:Name ="Refresh" >
+                    <CollectionView x:Name="CollectionView_Orders" SelectionMode="None" SelectionChanged ="CollectionView_Orders_SelectionChanged"/>
+                </RefreshView>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
