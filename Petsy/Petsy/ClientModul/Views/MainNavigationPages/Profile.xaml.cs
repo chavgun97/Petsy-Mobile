@@ -20,10 +20,10 @@ namespace Petsy.Views.MainNavigationPages
         {
             currentUser = CurrentUser.GetInstance();
             InitializeComponent();
-            InformAboutUser.Text = 
-                "Страница пользователя: " + currentUser.Get().Name +
-                " \n токен пользователя: " + currentUser.Get().UID +
-                "\n id пользователя в бек енд системе: " + currentUser.Get().Id;
+            InformAboutUser.Text =
+                "User page: " + currentUser.Get().Name +
+                " \n the user token: " + currentUser.Get().UID +
+                "\n user id in the back-end system: " + currentUser.Get().Id;
             NameLable.Text = currentUser.Get().Name;
             Amount.Text = Math.Round(currentUser.Get().TestAmountInCoins / 100.0, 2).ToString();
             LableFoto.Source = (currentUser.Get().UrlPhotoLable != null) ? currentUser.Get().UrlPhotoLable :
