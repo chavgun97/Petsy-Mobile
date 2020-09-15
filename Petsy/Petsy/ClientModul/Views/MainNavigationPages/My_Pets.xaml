@@ -41,8 +41,9 @@
                         </VisualStateManager.VisualStateGroups>
                     </ImageButton>
                 </StackLayout>
-                <CollectionView x:Name="CollectionViewAllPets" SelectionMode ="Single" SelectionChanged="CollectionViewAllPets_SelectionChanged">
-                </CollectionView>
+                <RefreshView x:Name ="Refresh" >
+                    <CollectionView x:Name="CollectionViewAllPets" SelectionMode ="Single" SelectionChanged="CollectionViewAllPets_SelectionChanged"/>
+                </RefreshView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

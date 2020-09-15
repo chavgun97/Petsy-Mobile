@@ -1,4 +1,5 @@
-﻿using Petsy.Models.DTO;
+﻿using Petsy.Cache;
+using Petsy.Models.DTO;
 using Petsy.Views.MainNavigationPages.ChildrenPages;
 using System;
 using System.Collections.Generic;
@@ -17,17 +18,34 @@ namespace Petsy.Views.MainNavigationPages
         public New_order()
         {
             InitializeComponent();
+            
         }
 
         private void Dog_walking_cklicked(object sender, EventArgs e)
         {
+            if (CheckExistDog())
             Navigation.PushAsync(new AvailableSitters(TypeSitter.Walking));
+            else
+                Navigation.PushAsync(new Pet_info());
+
         }
 
         private void Dog_sitting_cklicked(object sender, EventArgs e)
         {
+            if(CheckExistDog())
             Navigation.PushAsync(new AvailableSitters(TypeSitter.PetSitting));
+            else
+                Navigation.PushAsync(new Pet_info());
+        }
 
+        private bool CheckExistDog()
+        {
+            var user = CurrentUser.GetInstance().Get();
+            if(user.Pets.Count == 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

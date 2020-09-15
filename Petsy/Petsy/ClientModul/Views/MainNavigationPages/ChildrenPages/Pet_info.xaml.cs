@@ -76,7 +76,7 @@ namespace Petsy.Views.MainNavigationPages.ChildrenPages
 
         private void Back_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new My_Pets());
+            Navigation.PopAsync();
 
         }
 
@@ -100,7 +100,7 @@ namespace Petsy.Views.MainNavigationPages.ChildrenPages
             {
                 client.UpdatePet(pet); //return status;    
             }
-             Navigation.PushAsync(new My_Pets());
+            Navigation.PopAsync();
         }
     }
 }

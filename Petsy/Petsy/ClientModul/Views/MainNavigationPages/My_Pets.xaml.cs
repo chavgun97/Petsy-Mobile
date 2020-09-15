@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,10 +21,14 @@ namespace Petsy.Views.MainNavigationPages
     {
         private IApi client;
         private ICache<User> currentUser;
+        public ICommand RefreshCommand { get; }
+
         public My_Pets()
         {
             client = Api.GetInstance();
             currentUser = CurrentUser.GetInstance();
+            RefreshCommand = new Command(ExecuteRefreshCommand);
+
             InitializeComponent();
             Logic();
         }
@@ -64,7 +68,16 @@ namespace Petsy.Views.MainNavigationPages
             });
 
             petsView.ItemsSource = client.GetPetsByUserId(currentUser.Get().Id);
-            
+            Refresh.Command = RefreshCommand;
+
+
+        }
+        public void ExecuteRefreshCommand()
+        {
+            Logic();
+
+            // Stop refreshing
+            Refresh.IsRefreshing = false;
         }
 
         private async void AddPet_Clicked(object sender, EventArgs e)
