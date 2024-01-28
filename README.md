@@ -28,7 +28,11 @@ This section showcases various stages and features of the Petsy application. The
  ## Video Demonstration
 
 Watch a comprehensive video showcasing the Petsy application in action:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5YXCSKhpc-0?si=EvAxS5Chdf34BGPn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+https://github.com/chavgun97/Petsy-Mobile/assets/32164852/fd871de6-5d7f-4854-8574-9abaaf04d214
+
+
 
 ## Objectives and Scope
 
