@@ -7,8 +7,7 @@
 
 This section showcases various stages and features of the Petsy application. The images provide a visual representation of the application's design, functionality, and user interface.
 
-1. ![Petsy Home Screen](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png)
-2. ![Welcome](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Choose%20option.png)
+1. ![Petsy Home Screen](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png) 2. ![Welcome](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Choose%20option.png)
 2. ![User Registration](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Create%20Account(ready).png)
 3. ![User sign in ](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sign%20in(ready).png)
 4. ![Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Info.png)
