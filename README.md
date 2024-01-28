@@ -76,7 +76,7 @@ The project reflects a thorough research and practical approach towards developi
 
 ## Contact
 
-For further information or inquiries about the Petsy project, feel free to reach out to Mykola Chavhun at [mykolachavhun@email.com].
+For further information or inquiries about the Petsy project, feel free to reach out to Mykola Chavhun at [chavgun97@gmail.com].
 
 ## License
 
