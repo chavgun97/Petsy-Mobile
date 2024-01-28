@@ -9,7 +9,6 @@
 - [Project Structure](#project-structure)
 - [Conclusion](#conclusion)
 - [Contact](#contact)
-- [License](#license)
 ## Overview
 
 "Petsy" is a commercial application designed to revolutionize pet care services by connecting pet owners with service providers. This project explores the feasibility of creating such an application by a single individual using modern technologies.
@@ -77,10 +76,3 @@ The project reflects a thorough research and practical approach towards developi
 ## Contact
 
 For further information or inquiries about the Petsy project, feel free to reach out to Mykola Chavhun at [chavgun97@gmail.com].
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-*This README.md is based on the provided project documentation and prepared for GitHub presentation.*
