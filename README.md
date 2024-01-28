@@ -10,18 +10,9 @@ This section showcases various stages and features of the Petsy application. The
  ![Petsy Home Screen](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png)  ![Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Info.png) 
  ![Choose option](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Choose%20option.png)  ![Welcome](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Welcome.png)
  ![User Registration](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Create%20Account(ready).png) ![User sign in ](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sign%20in(ready).png)
- ![New Orde](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/New%20Order(concept).png) ![Available sitters](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/%5B-%5B-%5B-%5BAvailable%20sitters!!!!!!!!!!!!!!!.png) ![Sitter Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sitter%20Info.png)
-6. 
-7. ![Payment Processing Interface](your-link-here)
-8. ![Chat Functionality](your-link-here)
-9. ![Order Monitoring System](your-link-here)
-10. ![Mobile Application Interface](your-link-here)
-11. ![Web Platform Interface](your-link-here)
-12. ![Application Security Features](your-link-here)
-13. ![System Design UML Diagram](your-link-here)
-14. ![Application Implementation Code Snippet](your-link-here)
-15. ![Performance Metrics](your-link-here)
-
+ ![New Orde](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/New%20Order(concept).png) ![Available sitters](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/%5B-%5B-%5B-%5BAvailable%20sitters!!!!!!!!!!!!!!!.png) 
+ ![Sitter Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sitter%20Info.png) [Pet info]([your-link-here](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Pet%20info.png))
+ [Chat]([your-link-here](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/4.png))
 
 ## Objectives and Scope
 
