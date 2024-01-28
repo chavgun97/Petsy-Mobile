@@ -1,8 +1,19 @@
 # Petsy: Commercial Pet Services Application
-
+## Table of Contents
+- [Overview](#overview)
+- [Demonstration](#demonstration)
+- [Video Demonstration](#video-demonstration)
+- [Objectives and Scope](#objectives-and-scope)
+- [Project Description](#project-description)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Conclusion](#conclusion)
+- [Contact](#contact)
+- [License](#license)
 ## Overview
 
 "Petsy" is a commercial application designed to revolutionize pet care services by connecting pet owners with service providers. This project explores the feasibility of creating such an application by a single individual using modern technologies.
+
 ## Demonstration
 
 This section showcases various stages and features of the Petsy application. The images provide a visual representation of the application's design, functionality, and user interface.
@@ -13,7 +24,11 @@ This section showcases various stages and features of the Petsy application. The
  ![New Orde](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/New%20Order(concept).png) ![Available sitters](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/%5B-%5B-%5B-%5BAvailable%20sitters!!!!!!!!!!!!!!!.png) 
  ![Sitter Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sitter%20Info.png) ![Chat](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/4.png)
  ![Pet info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Pet%20info.png)
- 
+
+ ## Video Demonstration
+
+Watch a comprehensive video showcasing the Petsy application in action:
+- [Petsy Application Video Demo](https://youtu.be/5YXCSKhpc-0)
 
 ## Objectives and Scope
 
