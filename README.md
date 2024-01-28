@@ -7,7 +7,7 @@
 
 This section showcases various stages and features of the Petsy application. The images provide a visual representation of the application's design, functionality, and user interface.
 
-1. ![Petsy Home Screen]([your-link-here](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png))
+1. ![Petsy Home Screen](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png)
 2. ![User Registration](your-link-here)
 3. ![Service Provider Profile](your-link-here)
 4. ![Pet Walking Service Interface](your-link-here)
