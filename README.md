@@ -8,10 +8,11 @@
 This section showcases various stages and features of the Petsy application. The images provide a visual representation of the application's design, functionality, and user interface.
 
 1. ![Petsy Home Screen](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Start.png)
-2. ![User Registration](your-link-here)
-3. ![Service Provider Profile](your-link-here)
-4. ![Pet Walking Service Interface](your-link-here)
-5. ![Pet Sitting Service Booking](your-link-here)
+2. ![Welcome](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Choose%20option.png)
+2. ![User Registration](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Create%20Account(ready).png)
+3. ![User sign in ](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Sign%20in(ready).png)
+4. ![Info](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Info.png)
+5. ![Welcome](https://github.com/chavgun97/Petsy-Mobile/blob/master/Image%20Project/Welcome.png)
 6. ![User Review and Rating System](your-link-here)
 7. ![Payment Processing Interface](your-link-here)
 8. ![Chat Functionality](your-link-here)
